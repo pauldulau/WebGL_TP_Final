@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TP Final Paul Dulau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body onload='main()'>
+
+  <div>
+    <canvas id='webgl'>
+    </canvas>
+  </div>
+  <div class="settings">
+    <h2>--SETTINGS--</h2>
+
+    <h5>Translation</h5>
+    <div>
+      <label for="xTranslation">Tx</label>
+      <div>
+        <input type="range" value="0" min="-10" max="10" step="0.1" id="xTranslation">
+      </div>
+    </div>
+    <div>
+      <label for="yTranslation">Ty</label>
+      <div>
+        <input type="range" value="0" min="-10" max="10" step="0.1" id="yTranslation">
+      </div>
+    </div>
+    <div>
+      <label for="zTranslation">Tz</label>
+      <div>
+        <input type="range" value="0" min="-10" max="10" step="0.1" id="zTranslation">
+      </div>
+    </div>
+
+    <h5>Rotation</h5>
+    <div>
+      <label for="xRotation">Rx</label>
+      <div>
+        <input type="range" value="0" min="-3.14" max="3.14" step="0.01" id="xRotation">
+      </div>
+    </div>
+    <div>
+      <label for="yRotation">Ry</label>
+      <div>
+        <input type="range" value="0" min="-3.14" max="3.14" step="0.01" id="yRotation">
+      </div>
+    </div>
+    <div>
+      <label for="zRotation">Rz</label>
+      <div>
+        <input type="range" value="0" min="-3.14" max="3.14" step="0.01" id="zRotation">
+      </div>
+    </div>
+
+    <h5>Camera</h5>
+    <div>
+      <label for="scaleFactor">Zoom</label>
+      <div>
+        <input type="range" value="1.5" min="-1" max="4" step="0.1" id="scaleFactor">
+      </div>
+    </div>
+    <div>
+      <label for="yFov">Perspective</label>
+      <div>
+        <input type="range" value="75" min="30" max="120" step="1" id="yFov">
+      </div>
+    </div>
+  </div>
+  <script src='/main.js'></script>
+  <script src='/gl-matrix-min.js'></script>
+  <script src='/iro.min.js'></script>
+</body>
+</html>
